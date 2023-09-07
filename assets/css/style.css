@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Impacta';
+    src: url('../fonts/uni-neue-3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --color-light-50: #f8fafc;
+
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-100: #000;
+
+    --color-blue-50: #088afa;
+    --color-blue-100: #175473;
+    --color-blue-900: #0d303f;
+
+    --color-purple-50: #744b89;
+
+    --color-orange-50: #ff7a01;
+
+    --color-gradient: linear-gradient(90deg, var(--color-blue-100), var(--color-blue-900), var(--color-purple-50));
+}
+
+*{
+    font-family: 'Impacta', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    background: var(--color-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* div que contém logo da Impacta */
+#header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header img{
+    width: 300px;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 30px 40px;
+    background-color: var(--color-light-50);
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px rgb(0,0,0,0.336);
+    height: fit-content;
+}
+/* formulário */
+#calculadoraimc_form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#title{
+    font-size: 25px;
+    position: relative;
+}
+#title::after{
+    position: absolute;
+    content: '';
+    background-color: var(--color-blue-50);
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 3px;
+    border-radius: 3px;
+
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box label{
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-purple-50);
+}
+.input-field img{
+    width: 18px;
+}
+
+.input-field input{
+    border: none;
+    background-color: transparent;
+    width: 200px;
+    font-size: 15px;
+    padding: 0px 5px;
+}
+
+.input-field input:focus{
+    outline: none;
+}
+
+#calculate_button{
+    border: none;
+    background: var(--color-blue-50);
+    color: var(--color-light-50);
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#calculate_button:hover{
+    transform:scale(1.05)
+}
+
+#result{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    color: var(--color-blue-900);
+    border-top: 1px solid var(--color-dark-50);
+    padding: 0.75rem 0;
+}
+
+#bmi{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2.25rem;
+}
+
+#bmi span:last-child{
+    font-size: 0.875rem;
+}
+
+#description{
+    width: 5rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.normal{
+    color: #16a34a;
+}
+
+.attention{
+    color: #e59514;
+}
+
+.danger{
+    color: #dc2626;
+}
+
+#icon_credit{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#icon_credit a{
+    font-size: 10px;
+    color: var(--color-light-50);
+}

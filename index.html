@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <main id="container">
+        <div id="header">
+            <a href="https://www.impacta.edu.br/" target="_blank"><img src="assets/imgs/impacta_logo3.png" alt="Logo Impacta"></a>
+        </div>
+        <section id="calculator">
+            <form id="calculadoraimc_form">
+                <h1 id="title">Calculadora de IMC</h1>
+                <div id="inputs">
+                    <div class="input-box">
+                        <label for="weight">Peso (kg):
+                            <div class="input-field">
+                                <a><img src="assets/imgs/escala-de-peso.png" alt="icone peso"></a>
+                                <input type="number" id="weight" name="weight" step="0.01" required>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <label for="height">Altura (m):
+                            <div class="input-field">
+                                <a><img src="assets/imgs/altura.png" alt="icone altura"></a>
+                                <input type="number" id="height" name="height" step="0.01" required>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" id="calculate_button">Calcular</button>
+            </form>
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="equal">
+                        <span>=</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="icon_credit">
+            <a href="https://www.flaticon.com/br/icone-gratis/altura_7990208?term=altura&page=1&position=1&origin=tag&related_id=7990208" target="_blank" title="Ícone 'Altura'">Ícone 'Altura' criado por Mayor Icons - Flaticon</a>
+            <a href="https://www.flaticon.com/br/icone-gratis/escala-de-peso_3213786?term=peso&page=1&position=9&origin=tag&related_id=3213786" target="_blank" title="Ícone 'Peso'">Ícone 'Peso' criado por Soremba - Flaticon</a>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
